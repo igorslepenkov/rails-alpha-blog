@@ -10,9 +10,9 @@
   <tbody>
     <% @articles.each do |article| %>
       <tr>
-        <td><%= article.title %></td>
+        <td> <a href="./<%= article.id %>"><%= article.title %></a></td>
         <td><%= article.description %></td>
-        <td>Placeholder</td>
+        <td><a href="./<%=article.id%>/edit">Edit</a></td>
       </tr>
     <% end %>
   </tbody>
