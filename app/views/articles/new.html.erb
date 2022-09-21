@@ -1,14 +1,5 @@
 <h1>Create a new article</h1>
-<% if @article && @article.errors.any? %>
-  <h2>Followng errors occured:</h2>
-  <ul>
-    <% @article.errors.full_messages.each do |msg| %>
-      <li>
-        <%= msg %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<%= render "errors" %>
 <%= form_with scope: :article, url: articles_path, local: true do |f| %>
   <p>
     <%= f.label :title %>
@@ -22,5 +13,4 @@
   </p>
   <p> <%= f.submit %> </p>
 <% end %>
-
-<a href="../">Back to articles</a>
+<p> <%= link_to("Articles", articles_path) %> </p>
