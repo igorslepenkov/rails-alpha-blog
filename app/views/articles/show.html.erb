@@ -1,8 +1,17 @@
-<h1>Article <%= @article.id%></h1>
-<div>
-  <h3>Title: <%=@article.title%></h3>
-  <p>Description: <%=@article.description%></p>
+<div class="card w-50 h-50 text-primary bg-light">
+  <div class="card-body d-flex flex-column justify-content-between">
+    <h1 class="card-header mb-3">Article <%= @article.id%></h1>
+    <h3 class="card-title"><%=@article.title%></h3>
+    <p class="card-text"><%=@article.description%></p>
+    <div>
+      <%= link_to("Edit article", edit_article_path, class: "btn btn-primary") %>
+      <%= link_to(
+      "Delete article", 
+      article_path(@article), 
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, 
+      class: "btn btn-primary"
+      ) %>
+      <%= link_to("Articles", articles_path, class: "btn btn-primary") %>
+    </div>
+  </div>
 </div>
-<p> <%= link_to("Edit article", edit_article_path) %> </p>
-<p> <%= link_to("Delete article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) %> </p>
-<p> <%= link_to("Articles", articles_path) %> </p>

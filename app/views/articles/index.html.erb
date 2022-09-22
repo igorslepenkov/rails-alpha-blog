@@ -1,5 +1,5 @@
-<h1>All articles</h1>
-<table>
+<h1 class="text-danger">All articles</h1>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -25,5 +25,4 @@
     <% end %>
   </tbody>
 </table>
-<p> <%= link_to("Create new article", new_article_path) %> </p>
-<p> <%= link_to("Back to Home page", root_path) %> </p>
+<%= link_to("Create new article", new_article_path, class: "btn btn-primary") %>

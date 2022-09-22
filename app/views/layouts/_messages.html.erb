@@ -1,5 +1,8 @@
 <% if flash[:notice] %>
-  <h3>
-    <%= flash[:notice] %>
-  </h3>
+  <div class="align-self-center w-50 alert alert-success alert-dismissible">
+    <h3>
+      <%= flash[:notice] %>
+    </h3>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
 <% end %>

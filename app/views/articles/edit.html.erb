@@ -1,16 +1,17 @@
-<h1>Edit article <%= @article.id %></h1>
+<h1 class="text-primary">Edit article <%= @article.id %></h1>
 <%= render "errors" %>
-<%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %>
-    <br>
-    <%= f.text_field :title%>
-  </p>
-  <p>
-    <%= f.label :description %>
-    <br>
-    <%= f.text_area :description %>
-  </p>
-  <p> <%= f.submit %> </p>
+<%= form_with(model: @article, local: true, class: "card w-50") do |f| %>
+  <div class="card-body">
+    <p>
+      <%= f.label(:title, class: "form-label") %>
+      <br>
+      <%= f.text_field(:title, class: "form-control") %>
+    </p>
+    <p>
+      <%= f.label(:description, class: "form-label") %>
+      <br>
+      <%= f.text_area(:description, rows: 5, class: "form-control") %>
+    </p>
+    <p> <%= f.submit(class: "btn btn-primary") %> </p>
+  </div>
 <% end %>
-<p> <%= link_to("Cancel and return to articles", articles_path) %> </p>
