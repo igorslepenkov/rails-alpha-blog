@@ -5,6 +5,7 @@
       <th>Title</th>
       <th>Description</th>
       <th colspan="3">Actions</th>
+      <th>Username</th>
     </tr>
   </thead>
   <tbody>
@@ -21,6 +22,7 @@
         <td>
           <%= link_to("Delete", article_path(article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}) %>
         </td>
+        <td><%= article.user.username %></td>
       </tr>
     <% end %>
   </tbody>
