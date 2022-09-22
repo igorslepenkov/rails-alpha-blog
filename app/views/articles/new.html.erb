@@ -1,5 +1,5 @@
 <h1 class="card-title text-primary">Create a new article</h1>
-<%= render "errors" %>
+<%= render "shared/errors", obj: @article %>
 <%= form_with scope: :article, url: articles_path, local: true, class: "card w-50" do |f| %>
   <div class="card-body">
     <p>

@@ -1,5 +1,5 @@
 <h1 class="text-primary">Edit article <%= @article.id %></h1>
-<%= render "errors" %>
+<%= render "shared/errors", obj: @article %>
 <%= form_with(model: @article, local: true, class: "card w-50") do |f| %>
   <div class="card-body">
     <p>
