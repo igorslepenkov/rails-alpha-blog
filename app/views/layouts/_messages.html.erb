@@ -1,8 +1,16 @@
 <% if flash[:notice] %>
   <div class="align-self-center w-50 alert alert-success alert-dismissible">
-    <h3>
+    <h5>
       <%= flash[:notice] %>
-    </h3>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% end %>
+<% if flash[:alert] %>
+  <div class="align-self-center w-50 alert alert-danger alert-dismissible">
+    <h5>
+      <%= flash[:alert] %>
+    </h5>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 <% end %>

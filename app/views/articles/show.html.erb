@@ -1,20 +1,23 @@
-<div class="card text-center w-50 h-50 text-primary bg-light">
-  <div class="card-body d-flex flex-column justify-content-between">
-    <div class="card-header mb-3 d-flex justify-content-between">
-      <h1>Article <%= @article.id%></h1>
-      <p class="card-text">by <%= @article.user.username if @article.user %></p>
-    </div>
-    <h3 class="card-title"><%=@article.title%></h3>
-    <p class="card-text"><%=@article.description%></p>
-    <div>
-      <%= link_to("Edit article", edit_article_path, class: "btn btn-primary") %>
-      <%= link_to(
+<div class="h-100 w-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="card text-center w-50 text-primary bg-light">
+    <div class="card-body d-flex flex-column">
+      <div class="card-header mb-3 d-flex justify-content-between">
+        <h1>Article <%= @article.id%></h1>
+        <p class="card-text">by <%= @article.user.username if @article.user %></p>
+      </div>
+      <h3 class="card-title"><%=@article.title%></h3>
+      <p class="card-text"><%=@article.description%></p>
+      <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
+        <div>
+          <%= link_to("Edit article", edit_article_path, class: "btn btn-primary") %>
+          <%= link_to(
       "Delete article", 
       article_path(@article), 
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, 
       class: "btn btn-primary"
       ) %>
-      <%= link_to("Articles", articles_path, class: "btn btn-primary") %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
