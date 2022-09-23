@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :find_user_with_params_id, only: %i[show edit update destroy]
-  before_action :require_user, except: %i[index new show]
+  before_action :require_user, except: %i[show index new create]
   before_action :authenticate_user, only: %i[edit update destroy]
 
   def show; end
