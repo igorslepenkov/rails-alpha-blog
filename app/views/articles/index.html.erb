@@ -4,7 +4,7 @@
     <li class="card border-2 shadow mb-3 p-3">
       <div class="card-header d-flex justify-content-between">
         <p> <%= article.title %> </p>
-        <p> <%= article.user.username %> </p>
+        <p> <%= article.user.username if article.user %> </p>
       </div>
       <div class="card-body">
         <p class="card-text"><%= article.description%></p>
