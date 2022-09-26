@@ -1,6 +1,6 @@
 <% if obj && obj.errors.any? %>
   <div class="w-50 alert alert-danger alert-dismissible fade show">
-    <h2>Followng errors occured:</h2>
+    <h2 class='alert-heading'>Followng errors occured:</h2>
     <ul>
       <% obj.errors.full_messages.each do |msg| %>
         <li>

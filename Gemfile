@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+gem 'sassc-rails'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
@@ -74,3 +76,7 @@ end
 group :production do
   gem "pg"
 end
+
+gem 'will_paginate', '~> 3.3'
+
+gem 'solargraph'

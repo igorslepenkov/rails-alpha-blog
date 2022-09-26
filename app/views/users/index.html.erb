@@ -1,4 +1,7 @@
 <h1 class="card-title text-danger me-3">Alpha Bloggers</h1>
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @users, :container => false %>
+</div>
 <ul class="list-group w-50">
   <% @users.each do |user| %>
     <li class="card border-2 shadow mb-3 p-3">
@@ -12,3 +15,9 @@
     </li>
   <% end %>
 </ul>
+<div class="flickr_pagination mb-4">
+  <div class="page_info">
+    <%= page_entries_info @users %>
+  </div>
+  <%= will_paginate @users, :container => false %>
+</div>

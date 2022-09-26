@@ -1,4 +1,7 @@
 <h1 class="text-danger">All articles</h1>
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @articles, :container => false %>
+</div>
 <ul class="list-group w-75">
   <% @articles.each do |article| %>
     <li class="card border-2 shadow mb-3 p-3">
@@ -22,6 +25,12 @@
     </li>
   <% end %>
 </ul>
+<div class="flickr_pagination mb-4">
+  <div class="page_info">
+    <%= page_entries_info @articles %>
+  </div>
+  <%= will_paginate @articles, :container => false %>
+</div>
 <% if logged_in? %>
   <%= link_to("Create new article", new_article_path, class: "btn btn-primary") %>
 <% end %>
