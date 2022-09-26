@@ -1,1 +1,5 @@
 <h1 class="card-title text-danger me-3">Category: <%= @category.name %></h1>
+<% if logged_in? && current_user.admin? %>
+  <%= link_to "Edit category", edit_category_path, class: "btn btn-info" %>
+<% end %>
+<%= render 'articles/articles', articles: @articles %>

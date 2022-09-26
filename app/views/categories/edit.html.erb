@@ -1,0 +1,6 @@
+<h1 class="card-title text-primary">Edit category</h1>
+<%= render "shared/errors", obj: @category %>
+<%= render 'form' %>
+<% if logged_in? && current_user.admin? %>
+  <%= link_to "Cancel and go back to category", category_path(@category), class: "nav-link" %>
+<% end %>

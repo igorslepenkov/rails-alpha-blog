@@ -6,7 +6,7 @@
     <li class="card border-2 shadow mb-3 p-3">
       <div class="card-header d-flex justify-content-between">
         <div class="d-flex flex-column align-items-start">
-          <p>Article <%= article.title%></p>
+          <h4>Article <%= article.title%></h4>
           <% if article.categories.any?%>
             <p class="card-text">
               <%= render article.categories %>
