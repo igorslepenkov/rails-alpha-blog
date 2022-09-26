@@ -1,3 +1,14 @@
+.homepage {
+  background-size: 100% 100%;
+  background-image: asset-url("1_0xUiJ0naaeQheGusKboMGQ.jpeg");
+  background-repeat: no-repeat;
+}
+
+.homepage-text {
+  padding: 10px;
+  backdrop-filter: blur(10px);
+}
+
 // pagination styling
 
 .flickr_pagination {
