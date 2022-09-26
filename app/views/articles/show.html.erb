@@ -2,7 +2,14 @@
   <div class="card text-center w-50 text-primary bg-light">
     <div class="card-body d-flex flex-column">
       <div class="card-header mb-3 d-flex justify-content-between">
-        <h1>Article <%= @article.id%></h1>
+        <div class="d-flex flex-column align-items-start">
+          <h1>Article <%= @article.id%></h1>
+          <% if @article.categories.any?%>
+            <p class="card-text">
+              <%= render @article.categories %>
+            </p>
+          <% end %>
+        </div>
         <p class="card-text">by <%= @article.user.username if @article.user %></p>
       </div>
       <h3 class="card-title"><%=@article.title%></h3>

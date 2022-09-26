@@ -1,17 +1,5 @@
 <h1 class="text-primary">Edit article <%= @article.id %></h1>
 <%= render "shared/errors", obj: @article %>
 <%= form_with(model: @article, local: true, class: "card w-50") do |f| %>
-  <div class="card-body">
-    <p>
-      <%= f.label(:title, class: "form-label") %>
-      <br>
-      <%= f.text_field(:title, class: "form-control") %>
-    </p>
-    <p>
-      <%= f.label(:description, class: "form-label") %>
-      <br>
-      <%= f.text_area(:description, rows: 5, class: "form-control") %>
-    </p>
-    <p> <%= f.submit(class: "btn btn-primary") %> </p>
-  </div>
+  <%= render 'form', f: f %>
 <% end %>
