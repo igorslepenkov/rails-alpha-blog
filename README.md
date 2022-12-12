@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<div id="top"></div>
+<br />
+<div align="center">
+  <a href="https://github.com/igorslepenkov/rails-alpha-blog">
+    <img src="./rails-logo.svg" alt="Logo" width="80" height="80">
+  </a>
 
-Things you may want to cover:
+  <h3 align="center">Alpha Blog Project</h3>
 
-* Ruby version
+  <p align="center">Educational Blog Project</p>
+</div>
 
-* System dependencies
+### About Project
 
-* Configuration
+This is my first small Ruby project, that I have created during my RoR internship at IThechArt company.
 
-* Database creation
+It includes only 4 models without any additional relations between them. Also it has custom authorization and authentication logic.
 
-* Database initialization
+Front made with Bootstrap 5(but it wasn't the main purpose :) )
 
-* How to run the test suite
+### Built With
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [Ruby on Rails](https://rubyonrails.org/)
+- [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
